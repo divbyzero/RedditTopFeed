@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E20B79E6256D0539003E86DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B79E5256D0539003E86DE /* AppDelegate.swift */; };
-		E20B79EA256D0539003E86DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B79E9256D0539003E86DE /* ViewController.swift */; };
-		E20B79ED256D0539003E86DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E20B79EB256D0539003E86DE /* Main.storyboard */; };
 		E20B79EF256D053A003E86DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E20B79EE256D053A003E86DE /* Assets.xcassets */; };
 		E20B79F2256D053A003E86DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E20B79F0256D053A003E86DE /* LaunchScreen.storyboard */; };
 		E20B79FE256D084A003E86DE /* TopListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B79FD256D084A003E86DE /* TopListing.swift */; };
@@ -49,8 +47,6 @@
 /* Begin PBXFileReference section */
 		E20B79E2256D0539003E86DE /* RedditTopFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedditTopFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E20B79E5256D0539003E86DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E20B79E9256D0539003E86DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E20B79EC256D0539003E86DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E20B79EE256D053A003E86DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E20B79F1256D053A003E86DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E20B79F3256D053B003E86DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,7 +122,6 @@
 				E20B7AAC256D41D1003E86DE /* Managers */,
 				E20B7A13256D138E003E86DE /* ViewControllers */,
 				E20B7A07256D0D7C003E86DE /* Storyboards */,
-				E20B79E9256D0539003E86DE /* ViewController.swift */,
 				E20B79F3256D053B003E86DE /* Info.plist */,
 				E20B7A08256D0DBC003E86DE /* Localizable.stringsdict */,
 				E20B7B16256D5183003E86DE /* GlobalConsts.swift */,
@@ -156,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				E20B7AA8256D3C99003E86DE /* Storyboard.swift */,
-				E20B79EB256D0539003E86DE /* Main.storyboard */,
 				E20B79F0256D053A003E86DE /* LaunchScreen.storyboard */,
 				E20B7A3D256D14A7003E86DE /* TopFeed.storyboard */,
 				E20B7A74256D2E8C003E86DE /* TopFeedImagePreview.storyboard */,
@@ -357,7 +351,6 @@
 				E20B7A09256D0DBC003E86DE /* Localizable.stringsdict in Resources */,
 				E20B79EF256D053A003E86DE /* Assets.xcassets in Resources */,
 				E20B7A75256D2E8C003E86DE /* TopFeedImagePreview.storyboard in Resources */,
-				E20B79ED256D0539003E86DE /* Main.storyboard in Resources */,
 				E20B7A3E256D14A7003E86DE /* TopFeed.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,7 +363,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E20B7ADF256D4BCA003E86DE /* Dependencies.swift in Sources */,
-				E20B79EA256D0539003E86DE /* ViewController.swift in Sources */,
 				E20B7B26256D6545003E86DE /* Image.swift in Sources */,
 				E20B79FE256D084A003E86DE /* TopListing.swift in Sources */,
 				E20B7B0F256D4EDF003E86DE /* APIRequest.swift in Sources */,
@@ -406,14 +398,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E20B79EB256D0539003E86DE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E20B79EC256D0539003E86DE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E20B79F0256D053A003E86DE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

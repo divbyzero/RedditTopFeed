@@ -17,7 +17,7 @@ final class TopFeedCell: UITableViewCell, Identifiable {
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var numCommentsLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var thumbnailImageButton: UIButton!
+    @IBOutlet weak var thumbnailImageView: UIImageView!
     
     private let imageService = Services.dependencies.imageService
     
@@ -33,6 +33,14 @@ final class TopFeedCell: UITableViewCell, Identifiable {
         }
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(imageButtonPressed(recognizer:)))
+        singleTap.numberOfTapsRequired = 1
+        thumbnailImageView?.addGestureRecognizer(singleTap)
+    }
+    
     private func updateUI(with item: TopEntry.Data) {
         titleLabel?.text = item.title
         authorLabel?.text = item.author
@@ -42,25 +50,24 @@ final class TopFeedCell: UITableViewCell, Identifiable {
     }
     
     private func setThumbnailImage(by url: URL?) {
-        thumbnailImageButton?.isHidden = true
-        
         guard let url = item?.thumbnail,
               url.absoluteString.hasPrefix("http") else {
+            thumbnailImageView?.isHidden = true
             return
         }
         
         imageService.getImage(by: url) { [weak self] (image) in
-            guard let self = self,
-                  let image = image else {
+            guard let image = image else {
+                self?.thumbnailImageView?.isHidden = true
                 return
             }
             
-            self.thumbnailImageButton?.setImage(image, for: .normal)
-            self.thumbnailImageButton?.isHidden = false
+            self?.thumbnailImageView?.image = image
+            self?.thumbnailImageView?.isHidden = false
         }
     }
     
-    @IBAction func imageButtonPressed(_ sender: Any) {
+    @objc private func imageButtonPressed(recognizer: UIGestureRecognizer) {
         guard let item = item,
               let image = item.preview.images?.first else {
             return

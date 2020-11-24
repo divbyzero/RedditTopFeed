@@ -40,16 +40,26 @@ final class TopFeedViewModel: NSObject {
     // MARK: - Prepare & update UI
     
     private func updateItems(with data: [TopEntry.Data]) {
-        items.removeAll()
+        if afterHash == nil {
+            items.removeAll()
+        }
         
-        let item = TopFeedViewModelItem(data)
-        items.append(item)
-        
+        if let item = items.first {
+            item.models.append(contentsOf: data)
+        } else {
+            items = [TopFeedViewModelItem(data)]
+        }
+                
         // reload tableview
         reload?()
     }
     
     // MARK: - Request data
+    
+    @objc func forceRequestData() {
+        afterHash = nil
+        requestData()
+    }
     
     private func requestData() {
         guard isLoading == false else {
@@ -64,8 +74,8 @@ final class TopFeedViewModel: NSObject {
             
             switch result {
             case .success(let feedData):
-                self?.afterHash = feedData.data.after
                 self?.updateItems(with: feedData.data.children.map({ $0.data }))
+                self?.afterHash = feedData.data.after
             case .failure(let error):
                 print(error)
             }

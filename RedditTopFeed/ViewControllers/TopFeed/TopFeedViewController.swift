@@ -12,6 +12,7 @@ final class TopFeedViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var viewModel: TopFeedViewModel?
+    private var refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,8 @@ final class TopFeedViewController: UIViewController {
         }
         // update table view with new data
         viewModel?.reload = { [weak self] in
+            self?.stopRefreshing()
+            
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
             }
@@ -38,6 +41,18 @@ final class TopFeedViewController: UIViewController {
         tableView?.rowHeight = UITableView.automaticDimension
         tableView?.estimatedRowHeight = UITableView.automaticDimension
         tableView?.tableFooterView = UIView()
+        tableView?.refreshControl = refreshControl
+        refreshControl.addTarget(viewModel, action: #selector(viewModel?.forceRequestData), for: .valueChanged)
+    }
+    
+    private func stopRefreshing() {
+        guard refreshControl.isRefreshing else {
+            return
+        }
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.refreshControl.endRefreshing()
+        }
     }
     
     // MARK: - Actions
