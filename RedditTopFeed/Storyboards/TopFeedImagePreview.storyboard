@@ -47,6 +47,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="o77-cV-jM2" id="Kt2-s6-8Gl"/>
                         <outlet property="imageView" destination="cp6-mo-JhZ" id="Lwy-zc-BFL"/>
+                        <outlet property="saveButton" destination="rm5-s6-pHB" id="1KZ-4Z-tfQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1pq-Rb-2o4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

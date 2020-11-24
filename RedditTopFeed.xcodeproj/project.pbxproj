@@ -30,6 +30,7 @@
 		E20B7A82256D3510003E86DE /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7A81256D3510003E86DE /* ImageService.swift */; };
 		E20B7AA6256D3C47003E86DE /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7AA5256D3C47003E86DE /* UIViewController.swift */; };
 		E20B7AA9256D3C99003E86DE /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7AA8256D3C99003E86DE /* Storyboard.swift */; };
+		E20B7AAF256D41E7003E86DE /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7AAE256D41E7003E86DE /* AlertManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		E20B7A81256D3510003E86DE /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		E20B7AA5256D3C47003E86DE /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		E20B7AA8256D3C99003E86DE /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		E20B7AAE256D41E7003E86DE /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				E20B7A06256D0D6B003E86DE /* Assets */,
 				E20B7A0B256D0F7A003E86DE /* Extensions */,
 				E20B7A80256D34F9003E86DE /* Services */,
+				E20B7AAC256D41D1003E86DE /* Managers */,
 				E20B7A13256D138E003E86DE /* ViewControllers */,
 				E20B7A07256D0D7C003E86DE /* Storyboards */,
 				E20B79E9256D0539003E86DE /* ViewController.swift */,
@@ -206,6 +209,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		E20B7AAC256D41D1003E86DE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E20B7AAE256D41E7003E86DE /* AlertManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -287,6 +298,7 @@
 				E20B7A6B256D1671003E86DE /* TopFeedViewModelItem.swift in Sources */,
 				E20B7A79256D2F19003E86DE /* TopFeedImagePreviewViewController.swift in Sources */,
 				E20B7A15256D13AF003E86DE /* TopFeedViewController.swift in Sources */,
+				E20B7AAF256D41E7003E86DE /* AlertManager.swift in Sources */,
 				E20B7A1B256D1407003E86DE /* TopFeedViewModel.swift in Sources */,
 				E20B7A82256D3510003E86DE /* ImageService.swift in Sources */,
 				E20B7A70256D16BF003E86DE /* ViewModelItem.swift in Sources */,
