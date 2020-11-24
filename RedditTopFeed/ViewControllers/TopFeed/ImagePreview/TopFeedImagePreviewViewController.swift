@@ -20,13 +20,15 @@ final class TopFeedImagePreviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // default states
+        activityIndicator?.stopAnimating()
         saveButton?.isEnabled = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        updateImage()
+        requestImage()
     }
     
     // MARK: - Actions
@@ -41,7 +43,7 @@ final class TopFeedImagePreviewViewController: UIViewController {
     
     // MARK: - Image
     
-    private func updateImage() {
+    private func requestImage() {
         // prevent several requests
         guard let activityIndicator = activityIndicator,
               activityIndicator.isAnimating == false else {
@@ -57,14 +59,18 @@ final class TopFeedImagePreviewViewController: UIViewController {
         activityIndicator.startAnimating()
         
         imageService.getImage(by: imageUrl) { [weak self] (image) in
-            guard let self = self,
-                  let image = image else {
-                return
+            DispatchQueue.main.async {
+                self?.activityIndicator?.stopAnimating()
             }
             
-            self.imageView?.image = image
-            self.activityIndicator?.stopAnimating()
-            self.saveButton?.isEnabled = true
+            self?.updateThumbnailImage(image)
+        }
+    }
+    
+    private func updateThumbnailImage(_ image: UIImage?) {
+        DispatchQueue.main.async { [weak self] in
+            self?.imageView?.image = image
+            self?.saveButton?.isEnabled = image != nil
         }
     }
     

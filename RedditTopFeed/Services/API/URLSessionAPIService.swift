@@ -51,7 +51,7 @@ final class URLSessionAPIService: APIServiceProtocol {
             } catch {
                 handler(.failure(error))
             }
-        }
+        }.resume()
     }
     
 }

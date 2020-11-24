@@ -20,11 +20,11 @@ struct TopFeedRequest: APIRequest {
     }
     
     private(set) var after: String?
-    private(set) var limit: Int
+    private(set) var limit: Int = 30
+    private(set) var rawJson: Int = 1
     
-    init(after: String? = nil, limit: Int = 30) {
+    init(after: String? = nil) {
         self.after = after
-        self.limit = limit
     }
     
 }

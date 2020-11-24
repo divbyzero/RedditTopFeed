@@ -8,13 +8,18 @@
 import Foundation
 
 struct TopEntry: Decodable {
+    
     struct Data: Decodable {
+        struct Preview: Decodable {
+            let images: [Image]?
+        }
+        
         let title: String
         let author: String
         let created: Date
         let numComments: Int
         let thumbnail: URL?
-        let url: URL
+        let preview: Preview
     }
     
     let data: Data
@@ -54,7 +59,8 @@ extension TopEntry.Data {
             created: Date().addingTimeInterval(TimeInterval(-Int.random(in: 60..<3600))),
             numComments: Int.random(in: 0..<1000),
             thumbnail: Bool.random() ? nil : URL(staticString: "https://b.thumbs.redditmedia.com/muRm2Kx-5DaVCWVTuoI5D6SV_Sa46UCMchCn3Fk6QuE.jpg"),
-            url: URL(staticString: "https://i.redd.it/fm0borvoi0161.jpg"))
+            preview: Preview(images: [Image.mock()])
+        )
     }
     
 }

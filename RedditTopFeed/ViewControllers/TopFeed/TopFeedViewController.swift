@@ -11,16 +11,24 @@ final class TopFeedViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    private let viewModel: TopFeedViewModel = TopFeedViewModel()
+    private var viewModel: TopFeedViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewModel = TopFeedViewModel()
+        
         prepareUI()
         
         // show image preview
-        viewModel.onImagePreviewPressed = { [weak self] url in
+        viewModel?.onImagePreviewPressed = { [weak self] url in
             self?.showImagePreview(with: url)
+        }
+        // update table view with new data
+        viewModel?.reload = { [weak self] in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
         }
     }
     

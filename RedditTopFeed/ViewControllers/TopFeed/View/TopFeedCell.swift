@@ -44,7 +44,8 @@ final class TopFeedCell: UITableViewCell, Identifiable {
     private func setThumbnailImage(by url: URL?) {
         thumbnailImageButton?.isHidden = true
         
-        guard let url = item?.thumbnail else {
+        guard let url = item?.thumbnail,
+              url.absoluteString.hasPrefix("http") else {
             return
         }
         
@@ -61,11 +62,11 @@ final class TopFeedCell: UITableViewCell, Identifiable {
     
     @IBAction func imageButtonPressed(_ sender: Any) {
         guard let item = item,
-              item.thumbnail != nil else {
+              let image = item.preview.images?.first else {
             return
         }
         
-        delegate?.topFeedCell(self, didImagePressedWithUrl: item.url)
+        delegate?.topFeedCell(self, didImagePressedWithUrl: image.source.url)
     }
 
 }

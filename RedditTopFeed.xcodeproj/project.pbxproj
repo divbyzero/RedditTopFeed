@@ -43,6 +43,7 @@
 		E20B7B1A256D538A003E86DE /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7B19256D538A003E86DE /* Parameters.swift */; };
 		E20B7B1D256D54C2003E86DE /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7B1C256D54C2003E86DE /* APIError.swift */; };
 		E20B7B22256D58A9003E86DE /* TopFeedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7B21256D58A9003E86DE /* TopFeedRequest.swift */; };
+		E20B7B26256D6545003E86DE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7B25256D6545003E86DE /* Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		E20B7B19256D538A003E86DE /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
 		E20B7B1C256D54C2003E86DE /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		E20B7B21256D58A9003E86DE /* TopFeedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopFeedRequest.swift; sourceTree = "<group>"; };
+		E20B7B25256D6545003E86DE /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			children = (
 				E20B79FD256D084A003E86DE /* TopListing.swift */,
 				E20B7A01256D08BF003E86DE /* TopEntry.swift */,
+				E20B7B25256D6545003E86DE /* Image.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 			files = (
 				E20B7ADF256D4BCA003E86DE /* Dependencies.swift in Sources */,
 				E20B79EA256D0539003E86DE /* ViewController.swift in Sources */,
+				E20B7B26256D6545003E86DE /* Image.swift in Sources */,
 				E20B79FE256D084A003E86DE /* TopListing.swift in Sources */,
 				E20B7B0F256D4EDF003E86DE /* APIRequest.swift in Sources */,
 				E20B7A0D256D0FA0003E86DE /* String.swift in Sources */,

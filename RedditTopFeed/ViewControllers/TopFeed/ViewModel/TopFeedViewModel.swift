@@ -10,6 +10,9 @@ import UIKit
 final class TopFeedViewModel: NSObject {
     
     var onImagePreviewPressed: ((_: URL) -> Void)?
+    var reload: (() -> Void)?
+    
+    private var apiService: APIServiceProtocol = Services.dependencies.apiService
 
     private(set) var items: [TopFeedViewModelItem] = []
     private lazy var mockData: [TopEntry.Data] = {
@@ -22,19 +25,51 @@ final class TopFeedViewModel: NSObject {
         
         return mocks
     }()
+    private var isLoading: Bool = false
+    private var afterHash: String? = nil
     
     override init() {
         super.init()
         
         // mock data for test
-        updateItems(with: mockData)
+        // updateItems(with: mockData)
+        
+        requestData()
     }
+    
+    // MARK: - Prepare & update UI
     
     private func updateItems(with data: [TopEntry.Data]) {
         items.removeAll()
         
         let item = TopFeedViewModelItem(data)
         items.append(item)
+        
+        // reload tableview
+        reload?()
+    }
+    
+    // MARK: - Request data
+    
+    private func requestData() {
+        guard isLoading == false else {
+            return
+        }
+        
+        isLoading = true
+        
+        let request = TopFeedRequest(after: afterHash)
+        apiService.send(request) { [weak self] (result) in
+            self?.isLoading = false
+            
+            switch result {
+            case .success(let feedData):
+                self?.afterHash = feedData.data.after
+                self?.updateItems(with: feedData.data.children.map({ $0.data }))
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
 }
@@ -44,6 +79,10 @@ final class TopFeedViewModel: NSObject {
 extension TopFeedViewModel: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard items.isEmpty == false else {
+            return 0
+        }
+        
         return items[section].rowCount
     }
     
