@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>top_feed_comments</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@top_feed_comment@</string>
+		<key>VARIABLE</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>u</string>
+			<key>zero</key>
+			<string>no comments</string>
+			<key>one</key>
+			<string>1 comment</string>
+			<key>other</key>
+			<string>%u comments</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
