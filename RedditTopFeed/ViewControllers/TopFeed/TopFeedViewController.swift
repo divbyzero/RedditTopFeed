@@ -17,6 +17,11 @@ final class TopFeedViewController: UIViewController {
         super.viewDidLoad()
 
         prepareUI()
+        
+        // show image preview
+        viewModel.onImagePreviewPressed = { [weak self] url in
+            self?.showImagePreview(with: url)
+        }
     }
     
     private func prepareUI() {
@@ -25,6 +30,21 @@ final class TopFeedViewController: UIViewController {
         tableView?.rowHeight = UITableView.automaticDimension
         tableView?.estimatedRowHeight = UITableView.automaticDimension
         tableView?.tableFooterView = UIView()
+    }
+    
+    // MARK: - Actions
+    
+    private func showImagePreview(with url: URL) {
+        let viewController = TopFeedImagePreviewViewController.instantiate(fromStoryboardType: .topFeedImagePreview)
+        viewController.imageUrl = url
+        
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            
+            self.show(viewController, sender: nil)
+        }
     }
     
 }

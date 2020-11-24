@@ -127,7 +127,6 @@
                     <navigationItem key="navigationItem" title="Top Feed" id="u6f-S0-anN"/>
                     <connections>
                         <outlet property="tableView" destination="Zha-rX-YQU" id="h09-tw-Hau"/>
-                        <segue destination="bZv-oa-zzQ" kind="show" identifier="showImagePreview" id="sWy-ge-rxa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W25-dh-CnK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -151,16 +150,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wnb-j1-onM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="231.8840579710145" y="97.767857142857139"/>
-        </scene>
-        <!--TopFeedImagePreview-->
-        <scene sceneID="PZ9-oJ-mkT">
-            <objects>
-                <viewControllerPlaceholder storyboardName="TopFeedImagePreview" id="bZv-oa-zzQ" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="hPG-5w-Ih8"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bYn-oI-Cin" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1611" y="98"/>
         </scene>
     </scenes>
     <resources>

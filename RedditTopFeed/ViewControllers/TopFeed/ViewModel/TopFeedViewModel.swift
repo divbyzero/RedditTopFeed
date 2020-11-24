@@ -8,9 +8,10 @@
 import UIKit
 
 final class TopFeedViewModel: NSObject {
+    
+    var onImagePreviewPressed: ((_: URL) -> Void)?
 
     private(set) var items: [TopFeedViewModelItem] = []
-    
     private lazy var mockData: [TopEntry.Data] = {
         var mocks: [TopEntry.Data] = []
         let count = Int.random(in: 10..<50)
@@ -64,8 +65,7 @@ extension TopFeedViewModel: UITableViewDelegate {}
 extension TopFeedViewModel: TopFeedCellDelegate {
     
     func topFeedCell(_ cell: TopFeedCell, didImagePressedWithUrl url: URL) {
-        // TODO: open image preview
-        print("show image preview \(url)")
+        onImagePreviewPressed?(url)
     }
     
 }

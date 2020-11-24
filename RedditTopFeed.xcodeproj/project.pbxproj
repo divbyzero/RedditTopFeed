@@ -28,6 +28,8 @@
 		E20B7A75256D2E8C003E86DE /* TopFeedImagePreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E20B7A74256D2E8C003E86DE /* TopFeedImagePreview.storyboard */; };
 		E20B7A79256D2F19003E86DE /* TopFeedImagePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7A78256D2F19003E86DE /* TopFeedImagePreviewViewController.swift */; };
 		E20B7A82256D3510003E86DE /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7A81256D3510003E86DE /* ImageService.swift */; };
+		E20B7AA6256D3C47003E86DE /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7AA5256D3C47003E86DE /* UIViewController.swift */; };
+		E20B7AA9256D3C99003E86DE /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7AA8256D3C99003E86DE /* Storyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		E20B7A74256D2E8C003E86DE /* TopFeedImagePreview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TopFeedImagePreview.storyboard; sourceTree = "<group>"; };
 		E20B7A78256D2F19003E86DE /* TopFeedImagePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopFeedImagePreviewViewController.swift; sourceTree = "<group>"; };
 		E20B7A81256D3510003E86DE /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		E20B7AA5256D3C47003E86DE /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		E20B7AA8256D3C99003E86DE /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 		E20B7A07256D0D7C003E86DE /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				E20B7AA8256D3C99003E86DE /* Storyboard.swift */,
 				E20B79EB256D0539003E86DE /* Main.storyboard */,
 				E20B79F0256D053A003E86DE /* LaunchScreen.storyboard */,
 				E20B7A3D256D14A7003E86DE /* TopFeed.storyboard */,
@@ -135,6 +140,7 @@
 				E20B7A10256D11A4003E86DE /* URL.swift */,
 				E20B7A64256D157B003E86DE /* Identifiable.swift */,
 				E20B7A67256D15D6003E86DE /* UITableView.swift */,
+				E20B7AA5256D3C47003E86DE /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -276,6 +282,7 @@
 				E20B79EA256D0539003E86DE /* ViewController.swift in Sources */,
 				E20B79FE256D084A003E86DE /* TopListing.swift in Sources */,
 				E20B7A0D256D0FA0003E86DE /* String.swift in Sources */,
+				E20B7AA9256D3C99003E86DE /* Storyboard.swift in Sources */,
 				E20B7A65256D157B003E86DE /* Identifiable.swift in Sources */,
 				E20B7A6B256D1671003E86DE /* TopFeedViewModelItem.swift in Sources */,
 				E20B7A79256D2F19003E86DE /* TopFeedImagePreviewViewController.swift in Sources */,
@@ -287,6 +294,7 @@
 				E20B7A68256D15D6003E86DE /* UITableView.swift in Sources */,
 				E20B7A02256D08BF003E86DE /* TopEntry.swift in Sources */,
 				E20B79E6256D0539003E86DE /* AppDelegate.swift in Sources */,
+				E20B7AA6256D3C47003E86DE /* UIViewController.swift in Sources */,
 				E20B7A11256D11A4003E86DE /* URL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
