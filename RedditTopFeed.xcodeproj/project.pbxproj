@@ -27,7 +27,7 @@
 		E20B7A70256D16BF003E86DE /* ViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7A6F256D16BF003E86DE /* ViewModelItem.swift */; };
 		E20B7A75256D2E8C003E86DE /* TopFeedImagePreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E20B7A74256D2E8C003E86DE /* TopFeedImagePreview.storyboard */; };
 		E20B7A79256D2F19003E86DE /* TopFeedImagePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7A78256D2F19003E86DE /* TopFeedImagePreviewViewController.swift */; };
-		E20B7A82256D3510003E86DE /* UrlManagerImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7A81256D3510003E86DE /* UrlManagerImageService.swift */; };
+		E20B7A82256D3510003E86DE /* URLSessionImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7A81256D3510003E86DE /* URLSessionImageService.swift */; };
 		E20B7AA6256D3C47003E86DE /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7AA5256D3C47003E86DE /* UIViewController.swift */; };
 		E20B7AA9256D3C99003E86DE /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7AA8256D3C99003E86DE /* Storyboard.swift */; };
 		E20B7AAF256D41E7003E86DE /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7AAE256D41E7003E86DE /* AlertManager.swift */; };
@@ -35,6 +35,14 @@
 		E20B7AD8256D4A57003E86DE /* ImageServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7AD7256D4A57003E86DE /* ImageServiceProtocol.swift */; };
 		E20B7ADF256D4BCA003E86DE /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7ADE256D4BCA003E86DE /* Dependencies.swift */; };
 		E20B7AE2256D4BF1003E86DE /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7AE1256D4BF1003E86DE /* AppDependencies.swift */; };
+		E20B7AE6256D4DE9003E86DE /* APIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7AE5256D4DE9003E86DE /* APIServiceProtocol.swift */; };
+		E20B7AEB256D4E44003E86DE /* URLSessionAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7AEA256D4E44003E86DE /* URLSessionAPIService.swift */; };
+		E20B7B0F256D4EDF003E86DE /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7B0E256D4EDF003E86DE /* APIRequest.swift */; };
+		E20B7B13256D4EF1003E86DE /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7B12256D4EF1003E86DE /* HTTPMethod.swift */; };
+		E20B7B17256D5183003E86DE /* GlobalConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7B16256D5183003E86DE /* GlobalConsts.swift */; };
+		E20B7B1A256D538A003E86DE /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7B19256D538A003E86DE /* Parameters.swift */; };
+		E20B7B1D256D54C2003E86DE /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7B1C256D54C2003E86DE /* APIError.swift */; };
+		E20B7B22256D58A9003E86DE /* TopFeedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7B21256D58A9003E86DE /* TopFeedRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,7 +68,7 @@
 		E20B7A6F256D16BF003E86DE /* ViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelItem.swift; sourceTree = "<group>"; };
 		E20B7A74256D2E8C003E86DE /* TopFeedImagePreview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TopFeedImagePreview.storyboard; sourceTree = "<group>"; };
 		E20B7A78256D2F19003E86DE /* TopFeedImagePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopFeedImagePreviewViewController.swift; sourceTree = "<group>"; };
-		E20B7A81256D3510003E86DE /* UrlManagerImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlManagerImageService.swift; sourceTree = "<group>"; };
+		E20B7A81256D3510003E86DE /* URLSessionImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionImageService.swift; sourceTree = "<group>"; };
 		E20B7AA5256D3C47003E86DE /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		E20B7AA8256D3C99003E86DE /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		E20B7AAE256D41E7003E86DE /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
@@ -68,6 +76,14 @@
 		E20B7AD7256D4A57003E86DE /* ImageServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceProtocol.swift; sourceTree = "<group>"; };
 		E20B7ADE256D4BCA003E86DE /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		E20B7AE1256D4BF1003E86DE /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		E20B7AE5256D4DE9003E86DE /* APIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceProtocol.swift; sourceTree = "<group>"; };
+		E20B7AEA256D4E44003E86DE /* URLSessionAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionAPIService.swift; sourceTree = "<group>"; };
+		E20B7B0E256D4EDF003E86DE /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		E20B7B12256D4EF1003E86DE /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		E20B7B16256D5183003E86DE /* GlobalConsts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConsts.swift; sourceTree = "<group>"; };
+		E20B7B19256D538A003E86DE /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
+		E20B7B1C256D54C2003E86DE /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		E20B7B21256D58A9003E86DE /* TopFeedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopFeedRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +127,7 @@
 				E20B79E9256D0539003E86DE /* ViewController.swift */,
 				E20B79F3256D053B003E86DE /* Info.plist */,
 				E20B7A08256D0DBC003E86DE /* Localizable.stringsdict */,
+				E20B7B16256D5183003E86DE /* GlobalConsts.swift */,
 			);
 			path = RedditTopFeed;
 			sourceTree = "<group>";
@@ -233,7 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				E20B7AD7256D4A57003E86DE /* ImageServiceProtocol.swift */,
-				E20B7A81256D3510003E86DE /* UrlManagerImageService.swift */,
+				E20B7A81256D3510003E86DE /* URLSessionImageService.swift */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -241,8 +258,39 @@
 		E20B7AE4256D4D4F003E86DE /* API */ = {
 			isa = PBXGroup;
 			children = (
+				E20B7B0D256D4EBB003E86DE /* Requests */,
+				E20B7AE5256D4DE9003E86DE /* APIServiceProtocol.swift */,
+				E20B7AEA256D4E44003E86DE /* URLSessionAPIService.swift */,
+				E20B7B1C256D54C2003E86DE /* APIError.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		E20B7B0D256D4EBB003E86DE /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				E20B7B20256D5896003E86DE /* TopFeed */,
+				E20B7B1F256D587C003E86DE /* Parameters */,
+				E20B7B0E256D4EDF003E86DE /* APIRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		E20B7B1F256D587C003E86DE /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
+				E20B7B12256D4EF1003E86DE /* HTTPMethod.swift */,
+				E20B7B19256D538A003E86DE /* Parameters.swift */,
+			);
+			path = Parameters;
+			sourceTree = "<group>";
+		};
+		E20B7B20256D5896003E86DE /* TopFeed */ = {
+			isa = PBXGroup;
+			children = (
+				E20B7B21256D58A9003E86DE /* TopFeedRequest.swift */,
+			);
+			path = TopFeed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,25 +369,33 @@
 				E20B7ADF256D4BCA003E86DE /* Dependencies.swift in Sources */,
 				E20B79EA256D0539003E86DE /* ViewController.swift in Sources */,
 				E20B79FE256D084A003E86DE /* TopListing.swift in Sources */,
+				E20B7B0F256D4EDF003E86DE /* APIRequest.swift in Sources */,
 				E20B7A0D256D0FA0003E86DE /* String.swift in Sources */,
 				E20B7AA9256D3C99003E86DE /* Storyboard.swift in Sources */,
 				E20B7A65256D157B003E86DE /* Identifiable.swift in Sources */,
+				E20B7B17256D5183003E86DE /* GlobalConsts.swift in Sources */,
 				E20B7A6B256D1671003E86DE /* TopFeedViewModelItem.swift in Sources */,
 				E20B7A79256D2F19003E86DE /* TopFeedImagePreviewViewController.swift in Sources */,
 				E20B7A15256D13AF003E86DE /* TopFeedViewController.swift in Sources */,
+				E20B7B13256D4EF1003E86DE /* HTTPMethod.swift in Sources */,
+				E20B7AE6256D4DE9003E86DE /* APIServiceProtocol.swift in Sources */,
 				E20B7AAF256D41E7003E86DE /* AlertManager.swift in Sources */,
 				E20B7A1B256D1407003E86DE /* TopFeedViewModel.swift in Sources */,
-				E20B7A82256D3510003E86DE /* UrlManagerImageService.swift in Sources */,
+				E20B7B1A256D538A003E86DE /* Parameters.swift in Sources */,
+				E20B7A82256D3510003E86DE /* URLSessionImageService.swift in Sources */,
 				E20B7AE2256D4BF1003E86DE /* AppDependencies.swift in Sources */,
 				E20B7A70256D16BF003E86DE /* ViewModelItem.swift in Sources */,
 				E20B7A42256D1531003E86DE /* TopFeedCell.swift in Sources */,
 				E20B7AD8256D4A57003E86DE /* ImageServiceProtocol.swift in Sources */,
 				E20B7AD4256D4A05003E86DE /* Services.swift in Sources */,
 				E20B7A68256D15D6003E86DE /* UITableView.swift in Sources */,
+				E20B7B22256D58A9003E86DE /* TopFeedRequest.swift in Sources */,
 				E20B7A02256D08BF003E86DE /* TopEntry.swift in Sources */,
 				E20B79E6256D0539003E86DE /* AppDelegate.swift in Sources */,
+				E20B7B1D256D54C2003E86DE /* APIError.swift in Sources */,
 				E20B7AA6256D3C47003E86DE /* UIViewController.swift in Sources */,
 				E20B7A11256D11A4003E86DE /* URL.swift in Sources */,
+				E20B7AEB256D4E44003E86DE /* URLSessionAPIService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,6 +19,8 @@ final class TopFeedCell: UITableViewCell, Identifiable {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var thumbnailImageButton: UIButton!
     
+    private let imageService = Services.dependencies.imageService
+    
     weak var delegate: TopFeedCellDelegate?
     
     var item: TopEntry.Data? {
@@ -46,7 +48,7 @@ final class TopFeedCell: UITableViewCell, Identifiable {
             return
         }
         
-        Services.shared.imageService.getImage(by: url) { [weak self] (image) in
+        imageService.getImage(by: url) { [weak self] (image) in
             guard let self = self,
                   let image = image else {
                 return

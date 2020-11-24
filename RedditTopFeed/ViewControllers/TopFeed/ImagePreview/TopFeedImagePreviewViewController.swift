@@ -13,6 +13,8 @@ final class TopFeedImagePreviewViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
+    private let imageService = Services.dependencies.imageService
+    
     var imageUrl: URL?
     
     override func viewDidLoad() {
@@ -54,7 +56,7 @@ final class TopFeedImagePreviewViewController: UIViewController {
         
         activityIndicator.startAnimating()
         
-        Services.shared.imageService.getImage(by: imageUrl) { [weak self] (image) in
+        imageService.getImage(by: imageUrl) { [weak self] (image) in
             guard let self = self,
                   let image = image else {
                 return

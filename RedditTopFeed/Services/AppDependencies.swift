@@ -9,12 +9,20 @@ import Foundation
 
 final class AppDependencies: Dependencies {
     
-    private lazy var urlSessionImageService: UrlManagerImageService = {
-        return UrlManagerImageService()
+    private lazy var urlSessionImageService: URLSessionImageService = {
+        return URLSessionImageService()
+    }()
+    
+    private lazy var urlSessionAPIService: URLSessionAPIService = {
+        return URLSessionAPIService()
     }()
     
     var imageService: ImageServiceProtocol {
         return urlSessionImageService
+    }
+    
+    var apiService: APIServiceProtocol {
+        return urlSessionAPIService
     }
     
 }

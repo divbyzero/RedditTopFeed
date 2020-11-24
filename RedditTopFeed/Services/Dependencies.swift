@@ -9,4 +9,5 @@ import Foundation
 
 protocol Dependencies {
     var imageService: ImageServiceProtocol { get }
+    var apiService: APIServiceProtocol { get }
 }
