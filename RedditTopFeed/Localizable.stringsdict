@@ -6,7 +6,7 @@
 	<dict>
 		<key>NSStringLocalizedFormatKey</key>
 		<string>%#@top_feed_comment@</string>
-		<key>VARIABLE</key>
+		<key>top_feed_comment</key>
 		<dict>
 			<key>NSStringFormatSpecTypeKey</key>
 			<string>NSStringPluralRuleType</string>

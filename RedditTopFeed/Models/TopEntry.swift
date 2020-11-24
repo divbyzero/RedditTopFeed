@@ -16,13 +16,15 @@ struct TopEntry: Decodable {
         let thumbnail: URL?
         let url: String
     }
+    
+    let data: Data
 }
 
 // MARK: - Formatters
 
 extension TopEntry.Data {
     
-    private static let numCommentsLocalizationKey: StaticString = "top_feed_comments"
+    private static let numCommentsLocalizationKey: String = "top_feed_comments"
     
     private static let dateTimeFormatter: RelativeDateTimeFormatter = {
         let formatter = RelativeDateTimeFormatter()
@@ -35,7 +37,7 @@ extension TopEntry.Data {
     }
     
     var numCommentsFormatted: String {
-        let format = NSLocalizedString("numCommentsLocalizationKey", comment: "string format to be found in Localizable.stringsdict")
+        let format = NSLocalizedString(Self.numCommentsLocalizationKey, comment: "format to be found in Localizable.stringsdict")
         return String.localizedStringWithFormat(format, numComments)
     }
     
@@ -47,10 +49,11 @@ extension TopEntry.Data {
     
     static func mock() -> TopEntry.Data {
         return TopEntry.Data(
-            title: String.random(length: 10),
-            author: String.random(length: 10), created: Date(),
+            title: String.random(length: UInt.random(in: 15..<150)),
+            author: String.random(length: 10),
+            created: Date().addingTimeInterval(TimeInterval(-Int.random(in: 60..<3600))),
             numComments: Int.random(in: 0..<1000),
-            thumbnail: Bool.random() ? nil : URL(staticString: "https://b.thumbs.redditmedia.com/muRm2Kx-5DaVCWVTuoI5D6SV_ Sa46UCMchCn3Fk6QuE.jpg"),
+            thumbnail: Bool.random() ? nil : URL(staticString: "https://b.thumbs.redditmedia.com/muRm2Kx-5DaVCWVTuoI5D6SV_Sa46UCMchCn3Fk6QuE.jpg"),
             url: "https://google.com")
     }
     

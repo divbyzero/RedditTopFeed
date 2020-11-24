@@ -10,7 +10,7 @@ import Foundation
 struct TopListing: Decodable {
     struct Data: Decodable {
         let dist: Int
-        let children: String
+        let children: [TopEntry]
         let after: String?
     }
     
