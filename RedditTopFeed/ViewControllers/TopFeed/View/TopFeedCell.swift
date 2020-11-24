@@ -46,7 +46,7 @@ final class TopFeedCell: UITableViewCell, Identifiable {
             return
         }
         
-        ImageService.shared.getImage(by: url) { [weak self] (image) in
+        Services.shared.imageService.getImage(by: url) { [weak self] (image) in
             guard let self = self,
                   let image = image else {
                 return

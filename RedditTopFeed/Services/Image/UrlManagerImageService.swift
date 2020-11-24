@@ -1,5 +1,5 @@
 //
-//  ImageService.swift
+//  UrlManagerImageService.swift
 //  RedditTopFeed
 //
 //  Created by  Volodymyr Sakhan on 24.11.2020.
@@ -7,11 +7,7 @@
 
 import UIKit
 
-final class ImageService {
-    
-    static let shared: ImageService = .init()
-    
-    private init() {}
+final class UrlManagerImageService: ImageServiceProtocol {
     
     func getImage(by url: URL, then handler: @escaping (UIImage?) -> Void) {
         print("request \(url.absoluteString)")
