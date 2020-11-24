@@ -42,6 +42,7 @@
 		E20B7B1D256D54C2003E86DE /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7B1C256D54C2003E86DE /* APIError.swift */; };
 		E20B7B22256D58A9003E86DE /* TopFeedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7B21256D58A9003E86DE /* TopFeedRequest.swift */; };
 		E20B7B26256D6545003E86DE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7B25256D6545003E86DE /* Image.swift */; };
+		E20B7B52256DC581003E86DE /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7B51256DC581003E86DE /* Cache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		E20B7B1C256D54C2003E86DE /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		E20B7B21256D58A9003E86DE /* TopFeedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopFeedRequest.swift; sourceTree = "<group>"; };
 		E20B7B25256D6545003E86DE /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		E20B7B51256DC581003E86DE /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				E20B7AAC256D41D1003E86DE /* Managers */,
 				E20B7A13256D138E003E86DE /* ViewControllers */,
 				E20B7A07256D0D7C003E86DE /* Storyboards */,
+				E20B7B50256DC56E003E86DE /* Utils */,
 				E20B79F3256D053B003E86DE /* Info.plist */,
 				E20B7A08256D0DBC003E86DE /* Localizable.stringsdict */,
 				E20B7B16256D5183003E86DE /* GlobalConsts.swift */,
@@ -290,6 +293,14 @@
 			path = TopFeed;
 			sourceTree = "<group>";
 		};
+		E20B7B50256DC56E003E86DE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E20B7B51256DC581003E86DE /* Cache.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -377,6 +388,7 @@
 				E20B7AE6256D4DE9003E86DE /* APIServiceProtocol.swift in Sources */,
 				E20B7AAF256D41E7003E86DE /* AlertManager.swift in Sources */,
 				E20B7A1B256D1407003E86DE /* TopFeedViewModel.swift in Sources */,
+				E20B7B52256DC581003E86DE /* Cache.swift in Sources */,
 				E20B7B1A256D538A003E86DE /* Parameters.swift in Sources */,
 				E20B7A82256D3510003E86DE /* URLSessionImageService.swift in Sources */,
 				E20B7AE2256D4BF1003E86DE /* AppDependencies.swift in Sources */,

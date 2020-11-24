@@ -128,10 +128,8 @@ extension TopFeedViewModel: UITableViewDataSourcePrefetching {
             return
         }
         
-        //
-        let itemsCount = items[lastIndexPath.section].rowCount
-        
-        if max(itemsCount - TopFeedViewModel.prefetchShearValue, itemsCount) <= lastIndexPath.row {
+        // prefetch condition
+        if max(items[lastIndexPath.section].rowCount - TopFeedViewModel.prefetchShearValue, 0) <= lastIndexPath.row {
             requestData()
         }
     }
