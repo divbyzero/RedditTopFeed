@@ -14,7 +14,7 @@ struct TopEntry: Decodable {
         let created: Date
         let numComments: Int
         let thumbnail: URL?
-        let url: String
+        let url: URL
     }
     
     let data: Data
@@ -54,7 +54,7 @@ extension TopEntry.Data {
             created: Date().addingTimeInterval(TimeInterval(-Int.random(in: 60..<3600))),
             numComments: Int.random(in: 0..<1000),
             thumbnail: Bool.random() ? nil : URL(staticString: "https://b.thumbs.redditmedia.com/muRm2Kx-5DaVCWVTuoI5D6SV_Sa46UCMchCn3Fk6QuE.jpg"),
-            url: "https://google.com")
+            url: URL(staticString: "https://i.redd.it/fm0borvoi0161.jpg"))
     }
     
 }

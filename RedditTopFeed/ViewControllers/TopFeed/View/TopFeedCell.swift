@@ -8,7 +8,7 @@
 import UIKit
 
 protocol TopFeedCellDelegate: AnyObject {
-    func topFeedCell(_ cell: TopFeedCell, didImagePressedWithUrl: URL)
+    func topFeedCell(_ cell: TopFeedCell, didImagePressedWithUrl url: URL)
 }
 
 final class TopFeedCell: UITableViewCell, Identifiable {
@@ -36,18 +36,34 @@ final class TopFeedCell: UITableViewCell, Identifiable {
         authorLabel?.text = item.author
         numCommentsLabel?.text = item.numCommentsFormatted
         dateLabel?.text = item.createdStringFormatted
-        
-        // thumbnail
+        setThumbnailImage(by: item.thumbnail)
+    }
+    
+    private func setThumbnailImage(by url: URL?) {
         thumbnailImageButton?.isHidden = true
         
-        // TODO: request image from url
-        if let _ = item.thumbnail {
-            thumbnailImageButton?.isHidden = false
+        guard let url = item?.thumbnail else {
+            return
+        }
+        
+        ImageService.shared.getImage(by: url) { [weak self] (image) in
+            guard let self = self,
+                  let image = image else {
+                return
+            }
+            
+            self.thumbnailImageButton?.setImage(image, for: .normal)
+            self.thumbnailImageButton?.isHidden = false
         }
     }
     
     @IBAction func imageButtonPressed(_ sender: Any) {
+        guard let item = item,
+              item.thumbnail != nil else {
+            return
+        }
         
-    }    
+        delegate?.topFeedCell(self, didImagePressedWithUrl: item.url)
+    }
 
 }

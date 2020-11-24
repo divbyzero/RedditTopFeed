@@ -27,6 +27,7 @@
 		E20B7A70256D16BF003E86DE /* ViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7A6F256D16BF003E86DE /* ViewModelItem.swift */; };
 		E20B7A75256D2E8C003E86DE /* TopFeedImagePreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E20B7A74256D2E8C003E86DE /* TopFeedImagePreview.storyboard */; };
 		E20B7A79256D2F19003E86DE /* TopFeedImagePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7A78256D2F19003E86DE /* TopFeedImagePreviewViewController.swift */; };
+		E20B7A82256D3510003E86DE /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20B7A81256D3510003E86DE /* ImageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		E20B7A6F256D16BF003E86DE /* ViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelItem.swift; sourceTree = "<group>"; };
 		E20B7A74256D2E8C003E86DE /* TopFeedImagePreview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TopFeedImagePreview.storyboard; sourceTree = "<group>"; };
 		E20B7A78256D2F19003E86DE /* TopFeedImagePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopFeedImagePreviewViewController.swift; sourceTree = "<group>"; };
+		E20B7A81256D3510003E86DE /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				E20B79FC256D0828003E86DE /* Models */,
 				E20B7A06256D0D6B003E86DE /* Assets */,
 				E20B7A0B256D0F7A003E86DE /* Extensions */,
+				E20B7A80256D34F9003E86DE /* Services */,
 				E20B7A13256D138E003E86DE /* ViewControllers */,
 				E20B7A07256D0D7C003E86DE /* Storyboards */,
 				E20B79E9256D0539003E86DE /* ViewController.swift */,
@@ -189,6 +192,14 @@
 			path = ImagePreview;
 			sourceTree = "<group>";
 		};
+		E20B7A80256D34F9003E86DE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E20B7A81256D3510003E86DE /* ImageService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -270,6 +281,7 @@
 				E20B7A79256D2F19003E86DE /* TopFeedImagePreviewViewController.swift in Sources */,
 				E20B7A15256D13AF003E86DE /* TopFeedViewController.swift in Sources */,
 				E20B7A1B256D1407003E86DE /* TopFeedViewModel.swift in Sources */,
+				E20B7A82256D3510003E86DE /* ImageService.swift in Sources */,
 				E20B7A70256D16BF003E86DE /* ViewModelItem.swift in Sources */,
 				E20B7A42256D1531003E86DE /* TopFeedCell.swift in Sources */,
 				E20B7A68256D15D6003E86DE /* UITableView.swift in Sources */,

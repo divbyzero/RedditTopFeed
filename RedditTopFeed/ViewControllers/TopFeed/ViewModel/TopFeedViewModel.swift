@@ -50,6 +50,7 @@ extension TopFeedViewModel: UITableViewDataSource {
         let item: TopEntry.Data = items[indexPath.section].models[indexPath.row]
         let cell: TopFeedCell = tableView.dequeueReusableCell(for: indexPath)
         cell.item = item
+        cell.delegate = self
         return cell
     }
 
@@ -58,3 +59,13 @@ extension TopFeedViewModel: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension TopFeedViewModel: UITableViewDelegate {}
+
+
+extension TopFeedViewModel: TopFeedCellDelegate {
+    
+    func topFeedCell(_ cell: TopFeedCell, didImagePressedWithUrl url: URL) {
+        // TODO: open image preview
+        print("show image preview \(url)")
+    }
+    
+}
