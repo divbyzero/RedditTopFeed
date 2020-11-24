@@ -69,7 +69,7 @@ final class TopFeedCell: UITableViewCell, Identifiable {
     
     @objc private func imageButtonPressed(recognizer: UIGestureRecognizer) {
         guard let item = item,
-              let image = item.preview.images?.first else {
+              let image = item.preview?.images?.first else {
             return
         }
         

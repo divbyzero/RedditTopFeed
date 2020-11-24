@@ -38,6 +38,7 @@ final class TopFeedViewController: UIViewController {
     private func prepareUI() {
         tableView?.dataSource = viewModel
         tableView?.delegate = viewModel
+        tableView?.prefetchDataSource = viewModel
         tableView?.rowHeight = UITableView.automaticDimension
         tableView?.estimatedRowHeight = UITableView.automaticDimension
         tableView?.tableFooterView = UIView()

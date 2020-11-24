@@ -49,8 +49,9 @@ final class TopFeedViewModel: NSObject {
         } else {
             items = [TopFeedViewModelItem(data)]
         }
-                
-        // reload tableview
+    }
+    
+    private func updateUI() {
         reload?()
     }
     
@@ -63,6 +64,7 @@ final class TopFeedViewModel: NSObject {
     
     private func requestData() {
         guard isLoading == false else {
+            updateUI()
             return
         }
         
@@ -79,6 +81,8 @@ final class TopFeedViewModel: NSObject {
             case .failure(let error):
                 print(error)
             }
+            
+            self?.updateUI()
         }
     }
 
@@ -110,6 +114,31 @@ extension TopFeedViewModel: UITableViewDataSource {
 
 extension TopFeedViewModel: UITableViewDelegate {}
 
+// MARK: - UITableViewDataSourcePrefetching
+
+extension TopFeedViewModel: UITableViewDataSourcePrefetching {
+    
+    static let prefetchShearValue: Int = 10
+    
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        guard isLoading == false,
+              items.isEmpty == false,
+              indexPaths.isEmpty == false,
+              let lastIndexPath = indexPaths.last else {
+            return
+        }
+        
+        //
+        let itemsCount = items[lastIndexPath.section].rowCount
+        
+        if max(itemsCount - TopFeedViewModel.prefetchShearValue, itemsCount) <= lastIndexPath.row {
+            requestData()
+        }
+    }
+    
+}
+
+// MARK: - TopFeedCellDelegate
 
 extension TopFeedViewModel: TopFeedCellDelegate {
     

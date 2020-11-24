@@ -19,7 +19,7 @@ struct TopEntry: Decodable {
         let created: Date
         let numComments: Int
         let thumbnail: URL?
-        let preview: Preview
+        let preview: Preview?
     }
     
     let data: Data
