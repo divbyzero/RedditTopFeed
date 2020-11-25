@@ -16,4 +16,3 @@ struct TopListing: Decodable {
     
     let data: Data
 }
-

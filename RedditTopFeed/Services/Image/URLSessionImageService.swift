@@ -13,13 +13,9 @@ final class URLSessionImageService: ImageServiceProtocol {
     
     func getImage(by url: URL, then handler: @escaping (UIImage?) -> Void) {
         if let image = cache.value(forKey: url) {
-            print("from cache \(url.absoluteString)")
-            
             handler(image)
             return
         }
-        
-        print("request \(url.absoluteString)")
         
         URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
             if let error = error {
